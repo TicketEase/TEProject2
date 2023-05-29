@@ -14,6 +14,7 @@ import EmpoloyeeLogIn from './Components/Login/EmpoloyeeLogIn';
 import AgentLogIn from './Components/Login/AgentLogIn';
 import TackenHome from "./Components/EmployeeSide/TackenTicket/TackenHome";
 import EmployeeHome from "./Components/EmployeeSide/EmployeeHome";
+import Footer from './Components/Footer/Footer';
 export default function App() {
   return (
     <>
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/EmployeeHome" element={<EmployeeHome />} />
       
       </Routes>
+      <Footer/>
       {/* <Cardds/> */}
     </>
   )

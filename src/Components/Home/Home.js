@@ -1,8 +1,5 @@
 import React from 'react';
-import '../Home/Home.css';
-import FAQSearchBar from '../FAQ/FAQSearchBar';
 import AboutUs from '../AboutUs/AboutUs';
-import LogInSlide from './LogInSlide';
 import CustomNavbar from '../CustomNavbar/CustomNavbar';
 import Footer from '../Footer/Footer';
 
@@ -43,7 +40,6 @@ function Home() {
         <AboutUs />
       </section>
 
-<Footer/>
       </>
     );
   }

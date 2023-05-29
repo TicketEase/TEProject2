@@ -1,0 +1,6 @@
+.dropdown-toggle {
+    color:#6b6b6b !important;
+  }
+  .dropdown-toggle::after {
+    display: none !important; 
+  }

@@ -6,17 +6,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState } from 'react';
 import axios from "axios";
-
+import './NavbarAgeHome.css'
 
 function NavbarAgeHome(props) {
- 
+
   const [searchEmail, setSearchEmail] = useState('');
-  
+
   const handleSearch = async (e) => {
     e.preventDefault();
     const serverUrl = `${process.env.REACT_APP_SERVER_URL}/SearchInAgentTicket/${searchEmail}`;
-        const result = await axios.get(serverUrl);
-        props.takeNewArrFromAgentCardsPage(result.data);
+    const result = await axios.get(serverUrl);
+    props.takeNewArrFromAgentCardsPage(result.data);
     setSearchEmail('');
 
 
@@ -37,6 +37,10 @@ function NavbarAgeHome(props) {
               <Nav.Link href="/allAgentTickets">Agent Tickets</Nav.Link>
               <Nav.Link href="/allCustomersTickets">Customers Tikets</Nav.Link>
 
+
+             
+
+              {/* 
               <NavDropdown title="Sorting Tikets By Status" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/sortAgTicketByStatus/1" >Open Status</NavDropdown.Item>
                 <NavDropdown.Item href="/sortAgTicketByStatus/2" >Closed Status</NavDropdown.Item>
@@ -53,11 +57,33 @@ function NavbarAgeHome(props) {
                 <NavDropdown.Item  href="/sortagticketbydepartment/1">Finance</NavDropdown.Item>
                 <NavDropdown.Item  href="/sortagticketbydepartment/2">Marketing</NavDropdown.Item>
                 <NavDropdown.Item  href="/sortagticketbydepartment/3">Development</NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
 
+
+
+
+              <NavDropdown title="Sorting" id="navbarScrollingDropdown" style={{ marginLeft: '1px' }}>
+
+                <NavDropdown title="Status" id="navbarScrollingDropdown-2" className='dropdown-toggle' >
+                  <NavDropdown.Item href="/sortAgTicketByStatus/1">Open Status</NavDropdown.Item>
+                  <NavDropdown.Item href="/sortAgTicketByStatus/2">Closed Status</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown.Divider />
+                <NavDropdown title="Priority" id="navbarScrollingDropdown-3" className='dropdown-toggle' >
+                  <NavDropdown.Item href="/sortAgTicketByPriority/1">High</NavDropdown.Item>
+                  <NavDropdown.Item href="/sortAgTicketByPriority/2">Medium</NavDropdown.Item>
+                  <NavDropdown.Item href="/sortAgTicketByPriority/3">Low</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown.Divider />
+                <NavDropdown title="Department" id="navbarScrollingDropdown-4" className='dropdown-toggle' >
+                  <NavDropdown.Item href="/sortagticketbydepartment/1">Finance</NavDropdown.Item>
+                  <NavDropdown.Item href="/sortagticketbydepartment/2">Marketing</NavDropdown.Item>
+                  <NavDropdown.Item href="/sortagticketbydepartment/3">Development</NavDropdown.Item>
+                </NavDropdown>
+              </NavDropdown>
             </Nav>
-            <div style={{ marginRight: '2px' }}>
-            <Form className="form-inline" style={{marginLeft:'1px'}} >
+
+            <Form className="form-inline" style={{ marginLeft: '1px' }} >
               <Form.Control
                 type="search"
                 placeholder="Search by email"
@@ -66,15 +92,15 @@ function NavbarAgeHome(props) {
                 // value={searchEmail}
                 onChange={(e) => setSearchEmail(e.target.value)}
               />
-                <Button onClick={handleSearch} variant="outline-warning " >Search</Button>
+              <Button onClick={handleSearch} variant="outline-warning " >Search</Button>
             </Form>
-            </div>
-         
-            
+
+
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
-   
+
 
     </>
   )

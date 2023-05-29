@@ -30,8 +30,8 @@ function NavbarAgeHome(props) {
               <Nav.Link href="/allAgentTickets">Agent Tickets</Nav.Link>
               <Nav.Link href="/allCustomersTickets">Customers Tikets</Nav.Link>
 
-             
            </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

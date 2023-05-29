@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import AboutUs from '../AboutUs/AboutUs';
+// import './CustomNavBar.css';
 function CustomNavbar() {
   return (
     <>
@@ -25,7 +26,7 @@ function CustomNavbar() {
               <a class="nav-link" href="#about-us">About Us</a>
             </li>
           </ul>
-          <NavDropdown title="Login As" id="navbarScrollingDropdown-3" style={{ marginLeft: '70%', color: "white" }}>
+          <NavDropdown title="Login As " id="navbarScrollingDropdown-3" style={{ marginLeft: '70%', color: "white" }}>
             <NavDropdown.Item href="/CustomerLogIn">Customer</NavDropdown.Item>
             <NavDropdown.Item href="/AgentLogIn">Agent</NavDropdown.Item>
             <NavDropdown.Item href="/EmpoloyeeLogIn">Employee</NavDropdown.Item>

@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import AgeCardList from "../Sorting/AgeCardList";
 import NavbarAgeHome from './NavbarAgeHome';
-
-
+import NavbarCustomerHome from '../ALLCustomersTkt/NavbarCustomerHome'
+import Footer from "../Footer/Footer";
 function AgeHome() {
     const [AgeData, setAgeData] = useState([]);
     const sendReq = async () => {
@@ -19,6 +19,7 @@ function AgeHome() {
     }, []);
     return (
         <>
+
         <NavbarAgeHome takeNewArrFromAgentCardsPage ={takeNewArrFromAgentCardsPage} />
 
             <AgeCardList dataList={AgeData} takeNewArrFromAgentCardsPage ={takeNewArrFromAgentCardsPage} />
