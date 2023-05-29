@@ -39,6 +39,7 @@ function Home() {
       <section id="about-us" style={{ paddingBottom: '10px', background: 'lightgray' }}>
         <AboutUs />
       </section>
+      <Footer/>
 
       </>
     );

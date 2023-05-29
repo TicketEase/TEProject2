@@ -13,6 +13,7 @@ import {
   from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Customersignup() {
   
@@ -20,6 +21,10 @@ function Customersignup() {
   
   // this code to handle the submit event
   let [newcustomer, setNewcustomer] = useState({});
+
+
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     function Customer(name, address, email, password) {
@@ -57,7 +62,7 @@ function Customersignup() {
 
     }
     console.log('useState',newcustomer);
-
+    navigate('/customer');
   };
   
 

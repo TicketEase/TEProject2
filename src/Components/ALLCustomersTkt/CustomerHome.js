@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import CardList from "./CardList";
 import NavbarCustomerHome from './NavbarCustomerHome';
-
+import Footer from "../Footer/Footer";
 
 function CustomerHome() {
     const [AgeData, setAgeData] = useState([]);
@@ -22,6 +22,8 @@ function CustomerHome() {
         <>
         <NavbarCustomerHome/>
             <CardList dataList={AgeData} takeNewArrFromAgentCardsPage ={takeNewArrFromAgentCardsPage} />
+            <Footer/>
+
         </>
     )
 }

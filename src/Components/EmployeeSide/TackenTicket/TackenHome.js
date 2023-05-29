@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import TackenList from "./TackenList";
 import NavbarEmployeeHome from '../NavbarEmployeeHome';
-
+import Footer from "../../Footer/Footer";
 
 function TackenHome() {
     const [AgeData, setAgeData] = useState([]);
@@ -22,6 +22,8 @@ function TackenHome() {
         <>
         <NavbarEmployeeHome/>
             <TackenList dataList={AgeData} takeNewArrFromAgentCardsPage ={takeNewArrFromAgentCardsPage} />
+            <Footer/>
+
         </>
         
     )

@@ -32,6 +32,7 @@ const faqData = require('./faqData.json');  // Import faqData.json
 /*9*/app.get('/getAllCustomers', getAllCustomersHandler);  //get all customers
 /**/app.patch('/updateAgentStatus/:TID', updateAgentStatusHandler);
 /**/app.patch('/closeCustomerTkt/:CID', closeCustomerTktHandler);
+/*21 */app.get('/getcustomerbyemail', getcustomerbyemailHandler);//get customer by email    
 // _____________________________________________________________________________________________________________________
 
 //agent side
@@ -248,6 +249,24 @@ function updateAgentStatusHandler(req, res) {
         .catch(error => {
             console.log("error in creating agent ticket", error);
             res.status(500).send("An error occurred while closing agent ticket");
+        });
+}
+
+/*21*/function getcustomerbyemailHandler(req, res) {
+    let customeremail = req.query.email;
+    let sql = `SELECT * FROM customers WHERE cemail = $1`;
+    let values = [customeremail];
+    client
+        .query(sql, values)
+        .then(result => {
+            if (result.rows.length > 0) {
+                res.send(result.rows);
+            } else {
+                res.send("Invalid email or password");
+            }
+        })
+        .catch(error => {
+            res.send("your not signed up please sign up");
         });
 }
 // _____________________________________________________________________________________________________________________

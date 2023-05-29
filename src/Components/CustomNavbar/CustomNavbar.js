@@ -27,7 +27,7 @@ function CustomNavbar() {
             </li>
           </ul>
           <NavDropdown title="Login As " id="navbarScrollingDropdown-3" style={{ marginLeft: '70%', color: "white" }}>
-            <NavDropdown.Item href="/CustomerLogIn">Customer</NavDropdown.Item>
+            <NavDropdown.Item href="/customer">Customer</NavDropdown.Item>
             <NavDropdown.Item href="/AgentLogIn">Agent</NavDropdown.Item>
             <NavDropdown.Item href="/EmpoloyeeLogIn">Employee</NavDropdown.Item>
           </NavDropdown>

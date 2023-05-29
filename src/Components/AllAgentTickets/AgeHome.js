@@ -23,6 +23,8 @@ function AgeHome() {
         <NavbarAgeHome takeNewArrFromAgentCardsPage ={takeNewArrFromAgentCardsPage} />
 
             <AgeCardList dataList={AgeData} takeNewArrFromAgentCardsPage ={takeNewArrFromAgentCardsPage} />
+            <Footer/>
+
         </>
     )
 }

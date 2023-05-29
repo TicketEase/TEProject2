@@ -128,7 +128,7 @@ function Customerlogin(props) {
                 <div className="shape" />
                 <div className="shape" />
             </div>
-            <form onSubmit={varifyUser}>
+            <form onSubmit={varifyUser} >
                 <h3>Login Here</h3>
                 <label htmlFor="username">Username</label>
                 <input type="text" placeholder="Email or Phone" id="username" />
