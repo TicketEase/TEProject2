@@ -22,7 +22,7 @@ function ModalCard(props) {
             customerticketid: props.item.customerticketid,
         }
         //    console.log(props);
-        //    console.log(obj);
+            console.log(obj);
         const serverURL = `${process.env.REACT_APP_SERVER_URL}/creatAgentTicket/${props.item.customerticketid}`
         const axiosRes = await axios.post(serverURL, obj);
         const serverURL2 = `${process.env.REACT_APP_SERVER_URL}/updateAgentStatus/${props.item.customerticketid}`

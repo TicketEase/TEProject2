@@ -83,8 +83,8 @@ function NavbarAgeHome(props) {
               </NavDropdown>
             </Nav>
 
-            <Form className="form-inline" style={{ marginLeft: '1px' }} >
-              <Form.Control
+            <Form className="form-inline" style={{ marginLeft: '1px',display:"flex",width:"500px"}} >
+              <Form.Control style={{marginBottom:"-20px",marginTop:"0px" ,height:"40px"}}
                 type="search"
                 placeholder="Search by email"
                 className="me-2"
@@ -92,7 +92,7 @@ function NavbarAgeHome(props) {
                 // value={searchEmail}
                 onChange={(e) => setSearchEmail(e.target.value)}
               />
-              <Button onClick={handleSearch} variant="outline-warning " >Search</Button>
+              <Button onClick={handleSearch} variant="outline-warning "style={{width:"auto",marginTop:"0px"}} >Search</Button>
             </Form>
 
 

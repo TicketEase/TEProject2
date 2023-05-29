@@ -33,40 +33,28 @@ function Cardds(props) {
 
   return (
     <>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
-      />
-      <div className="col-md-6 col-lg-4 pb-3">
-        <div
-          className="card card-custom bg-white border-white border-0"
-          style={{ height: 450 }}
-        >
-          <div
-            className="card-custom-img"
-            style={{
-              backgroundImage:
-                "url(https://img.freepik.com/premium-vector/water-color-texture-background_615199-13.jpg?w=2000)"
-            }}
-          />
-
-          <div className="card-body" style={{ overflowY: "auto" }}>
-            <h4 className="card-title">{props.customerticketid} : {props.tktsubject}</h4>
-            <p className="card-text">  {props.tktdescription}</p>
-
-          </div>
-          <div
-            className="card-footer"
-            style={{ background: "inherit", borderColor: "inherit" }}
-          >
-            <Button variant="success" onClick={() => { handleupdate(props) }}>Create ticket</Button>
-            <Button variant="danger" onClick={() => { handledelete(props.customerticketid) }}>Close ticket</Button>
-          </div>
-        </div>
+     <div className="ag-format-container">
+<div className="ag-courses_box">
+  <div className="ag-courses_item" style={{height:'300px',overflow:'scroll'}}>
+    <div className="ag-courses-item_link">
+      <div className="ag-courses-item_bg" />
+      <div className="ag-courses-item_title" style={{height:'2em',padding:'0%'}}>
+      {props.customerticketid} : {props.tktsubject}
       </div>
+      <div style={{ flex: 1, backgroundColor: "#FFF", height: "2px" }} />
+       <div style={{ flex: 1, backgroundColor: "#FFF", height: "2px" }} />
+      <div className="ag-courses-item_title" style= {{fontSize:'small'}}>
+       {props.tktdescription}
+       </div>
+       <div style={{ flex: 1, backgroundColor: "#FFF", height: "2px" }} />
+       <div className="ag-courses-item_date-box">
+       <Button variant="outline-warning" onClick={() => { handleupdate(props) }}>Create ticket</Button>
+<Button variant="outline-warning" onClick={() => { handledelete(props.customerticketid) }}>Close ticket</Button>
+       </div>
+     </div>
+  </div>
+</div>
+</div> 
       <ModalCard showFlag={showUpdate} handleclose={handleclose} item={clickedCard} takeNewArrFromChild={takeNewArrFromChild} />        
     </>
   )
@@ -74,6 +62,10 @@ function Cardds(props) {
 
 
 export default Cardds;
+
+
+
+
 
 
 

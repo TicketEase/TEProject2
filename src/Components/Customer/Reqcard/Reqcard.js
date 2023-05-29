@@ -11,7 +11,7 @@ function Reqcard(props) {
   <div className="ag-format-container">
     <div className="ag-courses_box">
       <div className="ag-courses_item" style={{height:'300px',overflow:'scroll'}}>
-        <a href="#" className="ag-courses-item_link">
+        <div className="ag-courses-item_link">
           <div className="ag-courses-item_bg" />
           <div className="ag-courses-item_title" style={{height:'2em',padding:'0%'}}>
             {props.cardinfo.tktsubject}
@@ -24,7 +24,7 @@ function Reqcard(props) {
             status:
             <span className="ag-courses-item_date">{props.cardinfo.tktstatus}</span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>

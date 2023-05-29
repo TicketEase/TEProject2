@@ -76,7 +76,7 @@ function Customerpage(props) {
           <div className='allRequests' style={{ display: 'flex', flexDirection: 'column', overflow: 'scroll', height: '75vh', width: '100%' }}>
             {/* <div className='requestAndButton'> */}
               
-              <hr />
+      
               <Row xs={1} md={3} className="g-4">
               {customerTickets.map((item, index) => {
                 return (
